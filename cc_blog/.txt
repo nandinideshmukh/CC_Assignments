@@ -1,0 +1,8 @@
+az account clear   
+az config set core.enable_broker_on_windows=false   
+az login   
+az account show
+az webapp list-runtimes --os windows | findstr NODE
+az --% webapp up --name ccbackend --resource-group ccbackend  --plan ASP-ccbackend-aa2a --runtime "NODE:22LTS" --location centralindia --os-type Windows
+npm install -g @azure/static-web-apps-cli   
+swa deploy ./ --env production   
