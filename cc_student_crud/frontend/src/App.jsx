@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useCallback } from "react";
 
 // ── Config ────────────────────────────────────────────────────────────────────
-const API = "http://localhost:5000/api";
-
+const API = "https://ccbackend-gmbadxdub9hub3be.centralindia-01.azurewebsites.net/api";
+// curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 const DEPARTMENTS = [
   "Computer Science", "Information Technology", "Electronics",
   "Mechanical", "Civil", "Business Administration",
