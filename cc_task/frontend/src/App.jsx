@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const API = "http://localhost:5000/api/tasks";
+const API = "https://ccbackend-gmbadxdub9hub3be.centralindia-01.azurewebsites.net/api/tasks";
 
 const STATUS_COLORS = {
   todo: { bg: "#f1f5f9", text: "#64748b", dot: "#94a3b8" },
