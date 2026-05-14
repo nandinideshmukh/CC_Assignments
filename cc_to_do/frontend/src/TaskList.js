@@ -15,7 +15,7 @@ function TaskList() {
   const fetchTasks = async () => {
     setLoading(true);
     try {
-      const res = await axios.get("http://localhost:5000/api/tasks");
+      const res = await axios.get("https://ccbackend-gmbadxdub9hub3be.centralindia-01.azurewebsites.net/api/tasks");
       setTasks(res.data);
       setError("");
     } catch (err) {
@@ -28,7 +28,7 @@ function TaskList() {
   const deleteTask = async (id) => {
     setDeletingId(id);
     try {
-      await axios.delete(`http://localhost:5000/api/tasks/${id}`);
+      await axios.delete(`https://ccbackend-gmbadxdub9hub3be.centralindia-01.azurewebsites.net/api/tasks/${id}`);
       await fetchTasks();
     } catch (err) {
       setError("Failed to delete task");
@@ -40,7 +40,7 @@ function TaskList() {
   const toggleStatus = async (task) => {
     setUpdatingId(task._id);
     try {
-      await axios.put(`http://localhost:5000/api/tasks/${task._id}`, {
+      await axios.put(`https://ccbackend-gmbadxdub9hub3be.centralindia-01.azurewebsites.net/api/tasks/${task._id}`, {
         status: task.status === "pending" ? "completed" : "pending"
       });
       await fetchTasks();

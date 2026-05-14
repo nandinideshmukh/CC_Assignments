@@ -31,7 +31,7 @@ function TaskForm() {
     setSuccess("");
 
     try {
-      await axios.post("http://localhost:5000/api/tasks", task);
+      await axios.post("https://ccbackend-gmbadxdub9hub3be.centralindia-01.azurewebsites.net/api/tasks", task);
       setSuccess("Task added successfully!");
       setTask({ title: "", description: "" });
       
