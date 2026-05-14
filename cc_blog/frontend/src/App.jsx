@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 
 // ── Config ────────────────────────────────────────────────────────────────────
-const API = "http://localhost:5000/api";
+const API = "https://ccbackend-gmbadxdub9hub3be.centralindia-01.azurewebsites.net/api";
 
 const CATEGORIES = ["Technology", "Lifestyle", "Travel", "Food", "Health", "Business", "Other"];
 
