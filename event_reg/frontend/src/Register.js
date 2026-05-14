@@ -18,7 +18,7 @@ function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/register", form);
+      await axios.post("https://ccbackend-gmbadxdub9hub3be.centralindia-01.azurewebsites.net/api/register", form);
       showToast("Registration successful!", "success");
       setForm({ name: "", email: "", phone: "", event: "" });
     } catch {
@@ -28,7 +28,7 @@ function Register() {
 
   const fetchUsers = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/register");
+      const res = await axios.get("https://ccbackend-gmbadxdub9hub3be.centralindia-01.azurewebsites.net/api/register");
       setUsers(res.data);
     } catch (err) {
       console.log(err);
