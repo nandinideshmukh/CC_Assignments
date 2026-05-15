@@ -5,5 +5,6 @@ az login
 az account show
 az webapp list-runtimes --os windows | findstr NODE
 az --% webapp up --name ccbackend --resource-group ccbackend  --plan ASP-ccbackend-aa2a --runtime "NODE:22LTS" --location centralindia --os-type Windows
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 npm install -g @azure/static-web-apps-cli   
 swa deploy ./ --env production   
